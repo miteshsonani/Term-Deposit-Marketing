@@ -1,8 +1,8 @@
-# Bank Term Deposit Subscription Prediction
+# Term Deposit Marketing
 
 ## Project Overview
 
-This project predicts whether a bank customer will subscribe to a **term deposit** using data from a direct marketing campaign.
+This project predicts whether a customer will subscribe to a **term deposit** using data from a direct marketing campaign.
 
 The main objectives are to:
 
