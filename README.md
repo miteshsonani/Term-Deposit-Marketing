@@ -63,7 +63,7 @@ Customer profile, financial information, loan status, and campaign timing can th
 ## Project Structure
 
 ```text
-Task2/
+Term Deposit Marketing/
 │
 ├── notebooks/
 │   ├── exploration/
