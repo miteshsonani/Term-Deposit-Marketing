@@ -1,5 +1,7 @@
 # Term Deposit Marketing
 
+**GitHub Repository:** [YGLB6ywki7CiRDjf](https://github.com/miteshsonani/YGLB6ywki7CiRDjf)
+
 ## Project Overview
 
 This project predicts whether a customer will subscribe to a **term deposit** using data from a direct marketing campaign.
