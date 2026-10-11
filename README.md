@@ -63,23 +63,25 @@ Customer profile, financial information, loan status, and campaign timing can th
 ## Project Structure
 
 ```text
-Term Deposit Marketing/
+YGLB6ywki7CiRDjf/
+│
+├── README.md
 │
 ├── notebooks/
 │   ├── exploration/
-│   │   └── 01_Bank_Marketing_EDA.ipynb
+│   │   └── 01_Term_Deposit_Marketing_EDA.ipynb
+│   │
 │   └── modeling/
 │       ├── 02_Random_Forest_Modeling.ipynb
 │       ├── 03_XGBoost_Modeling.ipynb
 │       └── 04_Model_Comparison_and_Business_Analysis.ipynb
 │
-├── reports/
-│   ├── figures/
-│   │   └── Bank_Term_Deposit_Analysis_Figures.pdf
-│   └── summary/
-│       └── Bank_Term_Deposit_Final_Report.pdf
-│
-└── README.md
+└── reports/
+    ├── figures/
+    │   └── Term_Deposit_Analysis_Figures.pdf
+    │
+    └── summary/
+        └── Term_Deposit_Final_Report.pdf
 ```
 
 ## Detailed Report
