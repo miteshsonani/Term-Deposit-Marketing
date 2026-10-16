@@ -1,6 +1,22 @@
 
 # Term Deposit Marketing
 
+
+# Term Deposit Marketing
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat&logo=scikitlearn&logoColor=white)
+![Random Forest](https://img.shields.io/badge/Random_Forest-228B22?style=flat)
+![XGBoost](https://img.shields.io/badge/XGBoost-EC6B23?style=flat)
+![Optuna](https://img.shields.io/badge/Optuna-4169E1?style=flat&logo=optuna&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=flat)
+![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0?style=flat)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white)
+
+## Project Overview
+
 **Customer Subscription Prediction | Random Forest & XGBoost**
 
 A machine learning project designed to predict customer subscriptions to bank term deposits, identify high-potential customer segments, and improve direct marketing campaign effectiveness.
