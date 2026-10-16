@@ -1,69 +1,135 @@
+
 # Term Deposit Marketing
 
-## Project Overview
+**Customer Subscription Prediction | Random Forest & XGBoost**
 
-This project predicts whether a customer will subscribe to a **term deposit** using data from a direct marketing campaign.
+A machine learning project designed to predict customer subscriptions to bank term deposits, identify high-potential customer segments, and improve direct marketing campaign effectiveness.
 
-The main objectives are to:
+---
 
-* Predict customer subscription (`yes/no`)
-* Compare **Random Forest** and **XGBoost**
-* Identify customers who are more likely to subscribe
-* Determine important features influencing subscription
-* Provide business recommendations for better customer targeting
+## 1. Project Overview
 
-## Dataset
+A European banking institution conducts direct marketing campaigns to promote term deposit subscriptions.
 
-The dataset contains approximately **40,000 customer records** with customer, financial, and campaign-related information.
+This project uses machine learning to identify customers who are more likely to subscribe and provide actionable business insights.
 
-The target variable is:
+### Objectives
 
-* `y = yes` → Customer subscribed
-* `y = no` → Customer did not subscribe
+- Predict customer subscription outcomes (`yes` / `no`).
+- Compare Random Forest and XGBoost models.
+- Identify important factors influencing subscription.
+- Determine high-potential customer segments.
+- Provide data-driven business recommendations.
 
-The dataset is imbalanced, with approximately **7.24% subscribers** and **92.76% non-subscribers**.
+---
 
-> The original dataset is not included in this GitHub repository.
+## 2. Dataset Overview
 
-## Models Used
+The dataset contains **40,000 customer records** and **14 original variables**, including demographic, financial, and campaign-related information.
 
-Two ensemble learning models were developed and optimized:
+**Target Variable:** `y`
 
-* **Random Forest**
-* **XGBoost**
+- `yes` — Customer subscribed.
+- `no` — Customer did not subscribe.
 
-Hyperparameter tuning was performed using **GridSearchCV**, 5-fold cross-validation, and **Optuna** for XGBoost.
+### Target Distribution
 
-## Final Model Comparison
+| Subscription Status | Percentage |
+|---|---:|
+| No | 92.76% |
+| Yes | 7.24% |
 
-| Metric    | Random Forest |    XGBoost |
-| --------- | ------------: | ---------: |
-| Accuracy  |        91.26% | **91.95%** |
-| Precision |        43.24% | **45.91%** |
-| Recall    |    **66.30%** |     62.60% |
-| F1 Score  |        52.34% | **52.97%** |
-| ROC-AUC   |        0.9175 | **0.9256** |
+The dataset is highly imbalanced, making Precision, Recall, F1 Score, and ROC-AUC important evaluation metrics.
 
-**XGBoost Grid 4** was selected as the final model because it provided the strongest overall balance across the evaluation metrics.
+> **Note:** The original dataset is not included in this repository.
 
-## Key Findings
+---
 
-* XGBoost achieved **91.95% holdout accuracy**.
-* Random Forest achieved slightly higher recall.
-* XGBoost achieved better Accuracy, Precision, F1 Score, and ROC-AUC.
-* Customers aged **60+**, students, retired customers, higher-balance customers, and selected campaign periods showed stronger historical subscription behavior.
-* Call duration was highly predictive, but it should not be used for pre-call customer selection because it is only known after a call begins.
+## 3. Project Methodology
 
-## Business Recommendation
+The project follows four main stages:
 
-Use the XGBoost model to **rank customers by subscription probability** rather than treating every customer equally.
+### Stage 1: Exploratory Data Analysis
 
-Customer profile, financial information, loan status, and campaign timing can then be combined with the model predictions to improve call-center targeting.
+- Data quality assessment
+- Target distribution analysis
+- Customer demographic and financial analysis
+- Campaign behavior analysis
+- Customer segmentation
 
-## Project Structure
+### Stage 2: Random Forest Modeling
+
+- Data preprocessing
+- Feature engineering
+- Class imbalance handling
+- Hyperparameter tuning using GridSearchCV
+- 5-fold cross-validation
+- Model evaluation
+
+### Stage 3: XGBoost Modeling
+
+- Baseline XGBoost model
+- Hyperparameter optimization
+- GridSearchCV and Optuna
+- 5-fold cross-validation
+- Feature importance analysis
+
+### Stage 4: Model Comparison & Business Analysis
+
+- Random Forest vs XGBoost comparison
+- Final model selection
+- Customer segmentation insights
+- Business recommendations
+
+---
+
+## 4. Model Performance
+
+| Metric | Random Forest | XGBoost |
+|---|---:|---:|
+| Accuracy | 91.26% | **91.95%** |
+| Precision | 43.24% | **45.91%** |
+| Recall | **66.30%** | 62.60% |
+| F1 Score | 52.34% | **52.97%** |
+| ROC-AUC | 0.9175 | **0.9256** |
+| Mean 5-Fold CV F1 | 0.5196 | **0.5305** |
+
+### Final Model: XGBoost Grid 4
+
+**XGBoost Grid 4** was selected because it achieved better overall Accuracy, Precision, F1 Score, ROC-AUC, and cross-validation F1.
+
+Random Forest demonstrated higher Recall, making it useful when identifying more potential subscribers is the primary objective.
+
+**Success Metric:** XGBoost achieved **91.95% holdout accuracy**, exceeding the 81% threshold.
+
+However, the saved 5-fold cross-validation results report average F1 rather than average accuracy. Therefore, the exact CV-accuracy requirement remains unverified.
+
+---
+
+## 5. Key Findings
+
+- **Customer Segmentation:** Customers aged 60+, students, retired customers, and higher-balance groups showed stronger historical subscription behavior.
+- **Campaign Timing:** Q1 demonstrated comparatively strong subscription performance.
+- **Financial Profile:** Housing loan status and account balance provided useful predictive information.
+- **Feature Importance:** Call duration, campaign timing, age, and financial characteristics contributed to predictions.
+- **Operational Limitation:** Call duration is unavailable before outreach and should not be used for pre-call customer targeting.
+
+---
+
+## 6. Business Recommendations
+
+1. Prioritize customers using predicted subscription probabilities.
+2. Combine model predictions with demographic and financial information.
+3. Consider both conversion rates and customer-segment sizes.
+4. Optimize campaigns using historical timing patterns.
+5. Develop a pre-call prediction model excluding call duration.
+
+---
+
+## 7. Project Structure
 
 ```text
-YGLB6ywki7CiRDjf/
+
 │
 ├── README.md
 │
@@ -84,11 +150,43 @@ YGLB6ywki7CiRDjf/
         └── Term_Deposit_Final_Report.pdf
 ```
 
-## Detailed Report
+---
 
-For complete model evaluation, visualizations, customer segmentation, feature analysis, and business recommendations, see:
+## 8. Project Documentation
 
-`reports/summary/Bank_Term_Deposit_Final_Report.pdf`
+| Document | Description |
+|---|---|
+| [Exploratory Data Analysis](notebooks/exploration/01_Term_Deposit_Marketing_EDA.ipynb) | Data exploration and customer segmentation |
+| [Random Forest Modeling](notebooks/modeling/02_Random_Forest_Modeling.ipynb) | Random Forest training, tuning, and evaluation |
+| [XGBoost Modeling](notebooks/modeling/03_XGBoost_Modeling.ipynb) | XGBoost optimization and feature importance |
+| [Model Comparison](notebooks/modeling/04_Model_Comparison_and_Business_Analysis.ipynb) | Final model comparison and business analysis |
+| [Final Project Report](reports/summary/Term_Deposit_Final_Report.pdf) | Detailed results, explanations, and recommendations |
+| [Analysis Figures](reports/figures/Term_Deposit_Analysis_Figures.pdf) | Comparative graphs and visual insights |
+
+---
+
+## 9. Tools & Technologies
+
+- Python
+- Pandas & NumPy
+- Scikit-learn
+- Random Forest
+- XGBoost
+- Optuna
+- Matplotlib & Seaborn
+- Jupyter Notebook
+
+---
+
+## 10. Conclusion
+
+This project demonstrates how machine learning can support more effective customer targeting in banking marketing campaigns.
+
+**XGBoost Grid 4 achieved 91.95% holdout accuracy and 0.9256 ROC-AUC**, providing the strongest overall documented performance among the final evaluated candidates.
+
+The findings highlight the importance of combining predictive modeling, customer segmentation, and interpretable business insights.
+
+---
 
 ## Author
 
