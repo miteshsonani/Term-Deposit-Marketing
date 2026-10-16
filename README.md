@@ -168,12 +168,12 @@ However, the saved 5-fold cross-validation results report average F1 rather than
 
 | Document | Description |
 |---|---|
-| [Exploratory Data Analysis](notebooks/exploration/01_Term_Deposit_Marketing_EDA.ipynb) | Data exploration and customer segmentation |
-| [Random Forest Modeling](notebooks/modeling/02_Random_Forest_Modeling.ipynb) | Random Forest training, tuning, and evaluation |
-| [XGBoost Modeling](notebooks/modeling/03_XGBoost_Modeling.ipynb) | XGBoost optimization and feature importance |
-| [Model Comparison](notebooks/modeling/04_Model_Comparison_and_Business_Analysis.ipynb) | Final model comparison and business analysis |
-| [Final Project Report](reports/summary/Term_Deposit_Final_Report.pdf) | Detailed results, explanations, and recommendations |
-| [Analysis Figures](reports/figures/Term_Deposit_Analysis_Figures.pdf) | Comparative graphs and visual insights |
+| [Exploratory Data Analysis](Notebooks/Exploration/01_Term_Deposit_Marketing_EDA.ipynb) | Data exploration and customer segmentation |
+| [Random Forest Modeling](Notebooks/Modeling/02_Random_Forest_Modeling.ipynb) | Random Forest training, tuning, and evaluation |
+| [XGBoost Modeling](Notebooks/Modeling/03_XGBoost_Modeling.ipynb) | XGBoost optimization and feature importance |
+| [Model Comparison](Notebooks/Modeling/04_Model_Comparison_and_Business_Analysis.ipynb) | Final model comparison and business analysis |
+| [Final Project Report](Reports/Summary/Term_Deposit_Final_Report.pdf) | Detailed results, explanations, and recommendations |
+| [Analysis Figures](Reports/Figures/Term_Deposit_Analysis_Figures.pdf) | Comparative graphs and visual insights |
 
 ---
 
