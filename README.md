@@ -10,7 +10,6 @@
 ![Optuna](https://img.shields.io/badge/Optuna-4169E1?style=flat&logo=optuna&logoColor=white)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=flat)
 ![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0?style=flat)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white)
 
 ## Project Overview
 
